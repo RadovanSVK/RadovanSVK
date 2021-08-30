@@ -4,7 +4,9 @@ import json
 from collections import Counter
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+
+#DEBUG has vulnerability and therefor needs to be turned-off on production environment HTTPS CVE 
+#app.config["DEBUG"] = True
 
 @app.route('/nxt')
 #@app.route('/')
